@@ -8,7 +8,7 @@ const projects = [
     title: "GroupIt",
     description:
       "GroupIt is a collaborative application designed to help users organize and manage groups, projects, and tasks in one place. The project focuses on creating an intuitive user experience while providing practical tools for collaboration and organization. Built with react and node.js, the project allowed me to gain experience working with full-stack application architecture, API communication, user interfaces, and managing application data",
-    image: "/projects/project2.png",
+    image: "../assets/projects/project2.png",
     tags: ["React", "Node.js"],
     demoUrl:
       "https://creating-a-group-management-app-production-e5ab.up.railway.app/login",

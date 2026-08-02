@@ -1,47 +1,47 @@
-import {Moon, Sun} from "lucide-react";
+import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
 
-export const ThemeToggle = () => {
-    const [isDarkmode, setIsDarkMode] = useState(false);
+export const ThemeToggle = ({ className }) => {
+  const [isDarkmode, setIsDarkMode] = useState(false);
 
-    useEffect(() => {
-        const storedTheme = localStorage.getItem("theme")
-        if(storedTheme === "dark") {
-            setIsDarkMode(true)
-            document.documentElement.classList.add("dark");
-        } else {
-            setIsDarkMode(false)
-            document.documentElement.classList.remove("dark");
-        }
-    }, [])
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme");
 
-    const toggleTheme = () => {
-        if (isDarkmode) {
-            document.documentElement.classList.remove("dark");
-            localStorage.setItem("theme", "light");
-            setIsDarkMode(false);
-        }
-        else {
-            document.documentElement.classList.add("dark");
-            localStorage.setItem("theme", "dark");
-            setIsDarkMode(true);
-        }
+    if (storedTheme === "dark") {
+      setIsDarkMode(true);
+      document.documentElement.classList.add("dark");
+    } else {
+      setIsDarkMode(false);
+      document.documentElement.classList.remove("dark");
     }
+  }, []);
 
-    return (
-    <button onClick={toggleTheme} 
-    className={cn(
-        "fixed max-sm:hidden top-5 right-5 z-50 p-2 rounded-full transition-colors duration-300",
-        "focus:outline-hidden "
-    )}
-    > 
+  const toggleTheme = () => {
+    if (isDarkmode) {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      setIsDarkMode(false);
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      setIsDarkMode(true);
+    }
+  };
 
-        {isDarkmode ? ( 
-        <Sun className="h-6 w-6 text-yellow-300"/> 
-    ) : (
-        <Moon className="h-6 w-6 text-blue-900"/>
-    )}
+  return (
+    <button
+      onClick={toggleTheme}
+      className={cn(
+        "p-2 rounded-full transition-colors duration-300",
+        className
+      )}
+    >
+      {isDarkmode ? (
+        <Sun className="h-6 w-6 text-yellow-300" />
+      ) : (
+        <Moon className="h-6 w-6 text-blue-900" />
+      )}
     </button>
-    )
-}
+  );
+};

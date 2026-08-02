@@ -13,7 +13,7 @@ export const Home = () => {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
 
         {/* Theme Toggle */}
-            <ThemeToggle />
+        <ThemeToggle className="fixed top-2 right-2 z-50 hidden md:block" />
 
         {/* background effect */}
             <StarBackground />

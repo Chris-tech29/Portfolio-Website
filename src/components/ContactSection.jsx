@@ -1,12 +1,10 @@
 import {
-  Instagram,
   Linkedin,
+  Github,
   Mail,
   MapPin,
   Phone,
   Send,
-  Twitch,
-  Twitter,
 } from "lucide-react";
 import { cn } from "../lib/utils";
 import { useToast } from "../hooks/use-toast";
@@ -38,8 +36,10 @@ export const ContactSection = () => {
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Have a project in mind or want to collaborate? Feel free to reach out.
-          I'm always open to discussing new opportunities.
+          I’m currently looking for entry level software engineering
+          opportunities, internships, and freelance projects. Whether you have a
+          question, an opportunity, or just want to connect, I’d love to hear
+          from you.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -57,7 +57,7 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium"> Email</h4>
                   <a
-                    href="mailto:hello@gmail.com"
+                    href="mailto:molinachristopher75@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     molinachristopher75@gmail.com
@@ -71,7 +71,7 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium"> Phone</h4>
                   <a
-                    href="tel:+11234567890"
+                    href="tel:+19188149656"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     (918)814-9656
@@ -84,8 +84,13 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-medium"> Location</h4>
-                  <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Tulsa Oklahoma
+                  <a
+                    href="https://maps.google.com/?q=Tulsa,Oklahoma"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Tulsa, Oklahoma
                   </a>
                 </div>
               </div>
@@ -94,23 +99,31 @@ export const ContactSection = () => {
             <div className="pt-8">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="#" target="_blank">
+                <a
+                  href="https://www.linkedin.com/in/christopher-dimas-6817322b8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full bg-primary/10 hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
+                >
                   <Linkedin />
                 </a>
-                <a href="#" target="_blank">
-                  <Instagram />
+
+                <a
+                  href="https://github.com/Chris-tech29"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full bg-primary/10 hover:bg-primary hover:text-white transition-all duration-300 hover:scale-110"
+                >
+                  <Github />
                 </a>
               </div>
             </div>
           </div>
 
-          <div
-            className="bg-card p-8 rounded-lg shadow-xs"
-            onSubmit={handleSubmit}
-          >
+          <div className="bg-card p-8 rounded-lg shadow-xs">
             <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
 
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label
                   htmlFor="name"
@@ -124,7 +137,7 @@ export const ContactSection = () => {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="John Doe..."
                 />
               </div>
@@ -141,7 +154,7 @@ export const ContactSection = () => {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="john@gmail.com"
                 />
               </div>
@@ -158,7 +171,7 @@ export const ContactSection = () => {
                   id="message"
                   name="message"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary resize-none"
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
                   placeholder="Hello, I'd like to talk about..."
                 />
               </div>
