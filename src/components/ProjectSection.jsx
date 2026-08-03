@@ -1,6 +1,9 @@
 import { Description } from "@radix-ui/react-toast";
 import { Tags } from "lucide-react";
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
+import Groupit from "../assets/projects/project2.png"
+import TaskAPI from "../assets/projects/project3.png"
+import FWCafe from "../assets/projects/project1.png"
 
 const projects = [
   {
@@ -8,13 +11,31 @@ const projects = [
     title: "GroupIt",
     description:
       "GroupIt is a collaborative application designed to help users organize and manage groups, projects, and tasks in one place. The project focuses on creating an intuitive user experience while providing practical tools for collaboration and organization. Built with react and node.js, the project allowed me to gain experience working with full-stack application architecture, API communication, user interfaces, and managing application data",
-    image: "../assets/projects/project2.png",
+    image: Groupit,
     tags: ["React", "Node.js"],
     demoUrl:
       "https://creating-a-group-management-app-production-e5ab.up.railway.app/login",
     githubUrl:
       "http://github.com/Chris-tech29/Creating-a-group-management-app-",
   },
+  {
+    id: 2,
+    title: "Task Management API",
+    description: "Ill add stuff later",
+    image: TaskAPI,
+    tags: ["TypeScript", "Node.js", "Prisma", "Docker"],
+    githubUrl:
+      "https://github.com/atlas-school-classroom/task-management-api-project-requirements-Chris-tech29",
+  },
+  {
+    id: 3,
+    title: "Fourth Wall Cafe",
+    description: "Ill add stuff later",
+    image: FWCafe,
+    tags: ["C#", "Docker", ".NET", "HTML", "CSS",],
+    githubUrl:
+      "https://github.com/atlas-school-classroom/cs1400-assignment-building-a-full-stack-cafe-pos-system-Chris-tech29",
+  }
 ];
 
 export const ProjectSection = () => {
