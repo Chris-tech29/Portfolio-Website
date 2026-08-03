@@ -21,18 +21,22 @@ const projects = [
   {
     id: 2,
     title: "Task Management API",
-    description: "Ill add stuff later",
+    description: "A secure RESTful API built with TypeScript, Node.js, Express, Prisma, PostgreSQL, and Redis for managing users and tasks. The project features JWT authentication, role-based authorization, CRUD operations, caching, logging, and automated testing, providing hands-on experience building scalable backend services.",
     image: TaskAPI,
     tags: ["TypeScript", "Node.js", "Prisma", "Docker"],
+    demoUrl:
+      "https://github.com/atlas-school-classroom/task-management-api-project-requirements-Chris-tech29",
     githubUrl:
       "https://github.com/atlas-school-classroom/task-management-api-project-requirements-Chris-tech29",
   },
   {
     id: 3,
     title: "Fourth Wall Cafe",
-    description: "Ill add stuff later",
+    description: "A full-stack Cafe Point of Sale (POS) application built with ASP.NET Core MVC, C#, MySQL, and Docker. The system allows employees to manage menu items, process customer orders, and handle transactions through a responsive interface while demonstrating full-stack development and database integration.",
     image: FWCafe,
     tags: ["C#", "Docker", ".NET", "HTML", "CSS",],
+    demoUrl:
+      "https://github.com/atlas-school-classroom/cs1400-assignment-building-a-full-stack-cafe-pos-system-Chris-tech29",
     githubUrl:
       "https://github.com/atlas-school-classroom/cs1400-assignment-building-a-full-stack-cafe-pos-system-Chris-tech29",
   }
